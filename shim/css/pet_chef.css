@@ -1,0 +1,1022 @@
+/* ==========================================================================
+   🐾 펫 셰프 & 펫 헬스케어 다이닝 스타일시트 (pet_chef.css)
+   ========================================================================== */
+
+:root {
+  --primary: #ff7043;
+  --primary-light: #ffab91;
+  --primary-dark: #d84315;
+  --secondary: #4db6ac;
+  --secondary-dark: #00897b;
+  --accent-cat: #7e57c2;
+  --accent-dog: #ffa726;
+  --accent-warn: #e53935;
+  --accent-safe: #43a047;
+  
+  --bg-main: #fffaf5;
+  --bg-card: #ffffff;
+  --bg-soft: #fff3e0;
+  --text-main: #2d3748;
+  --text-muted: #718096;
+  --text-light: #a0aec0;
+  --border-color: #f1dfd2;
+  
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 2px 8px rgba(255, 112, 67, 0.08);
+  --shadow-md: 0 8px 24px rgba(230, 81, 0, 0.1);
+  --shadow-lg: 0 16px 36px rgba(230, 81, 0, 0.15);
+  
+  --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* 🌟 네비게이션 헤더 */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--border-color);
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--primary-dark);
+}
+
+.brand-logo .logo-icon {
+  font-size: 2rem;
+  background: var(--bg-soft);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.brand-logo h1 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.brand-logo span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  background: var(--bg-soft);
+  color: var(--primary-dark);
+}
+
+.btn-cta {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 14px rgba(255, 112, 67, 0.35);
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 112, 67, 0.45);
+}
+
+/* 🌟 히어로 섹션 (Hero Profile with Real Photos) */
+.hero-section {
+  padding: 60px 0 50px;
+  background: linear-gradient(180deg, #fff3e0 0%, var(--bg-main) 100%);
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  border: 1px solid var(--primary-light);
+  color: var(--primary-dark);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a202c;
+  line-height: 1.3;
+  margin-bottom: 18px;
+}
+
+.hero-title .highlight {
+  color: var(--primary);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  word-break: keep-all;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.stat-box {
+  background: white;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-box strong {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+  font-weight: 800;
+}
+
+.stat-box span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* 셰프 프로필 카드 */
+.profile-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.profile-card-badge {
+  position: absolute;
+  top: -14px;
+  right: 24px;
+  background: var(--accent-dog);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+}
+
+.hero-photo-banner {
+  width: 100%;
+  height: 190px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.hero-photo-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.hero-photo-banner:hover img {
+  transform: scale(1.05);
+}
+
+.hero-photo-banner .photo-tag {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(4px);
+}
+
+.chef-avatar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.chef-avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffccbc, #ffab91);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  border: 3px solid white;
+  box-shadow: var(--shadow-md);
+}
+
+.chef-info h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1a202c;
+}
+
+.chef-info p {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.chef-quote {
+  background: var(--bg-soft);
+  border-left: 4px solid var(--primary);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-bottom: 16px;
+}
+
+.qualifications-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.qualifications-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #4a5568;
+  background: #fdfbf9;
+  padding: 7px 12px;
+  border-radius: var(--radius-sm);
+}
+
+/* 🌟 공통 섹션 스타일 */
+.section {
+  padding: 70px 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 45px;
+}
+
+.section-tag {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.section-header h2 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 12px;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  word-break: keep-all;
+}
+
+/* 🌟 실사 포토 갤러리 섹션 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.gallery-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-img-box {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-img-box img {
+  transform: scale(1.08);
+}
+
+.gallery-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text-main);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-info {
+  padding: 18px 20px;
+}
+
+.gallery-info h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 6px;
+}
+
+.gallery-info p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* 🌟 시그니처 메뉴 & 영양 분석표 (With Dish Photos) */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+.recipe-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.recipe-img-box {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.recipe-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.recipe-card:hover .recipe-img-box img {
+  transform: scale(1.06);
+}
+
+.recipe-header {
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #fff8f0, #ffecdc);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.recipe-target-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 8px;
+}
+
+.badge-dog { background: #ffe0b2; color: #e65100; }
+.badge-cat { background: #e1bee7; color: #4a148c; }
+.badge-both { background: #c8e6c9; color: #1b5e20; }
+
+.recipe-header h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 4px;
+}
+
+.recipe-header p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.recipe-body {
+  padding: 22px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ingredient-box {
+  background: #fdfbf9;
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px;
+}
+
+.ingredient-box h4 {
+  font-size: 0.88rem;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ingredient-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ing-tag {
+  background: white;
+  border: 1px solid #ebd7c8;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  color: #4a5568;
+}
+
+/* 영양 매트릭스 테이블 */
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.nutrition-table th, .nutrition-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #f0e6de;
+  text-align: left;
+}
+
+.nutrition-table th {
+  background: #faf5f0;
+  color: #4a5568;
+  font-weight: 700;
+}
+
+.nutrition-table td strong {
+  color: var(--primary-dark);
+}
+
+/* 🌟 인터랙티브 칼로리 & 1회 급여량 계산기 */
+.calculator-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border-color);
+  padding: 36px;
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 112, 67, 0.15);
+}
+
+.radio-pills {
+  display: flex;
+  gap: 10px;
+}
+
+.radio-pills label {
+  flex: 1;
+  cursor: pointer;
+  text-align: center;
+  border: 1.5px solid #e2e8f0;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.radio-pills input {
+  display: none;
+}
+
+.radio-pills input:checked + label {
+  background: var(--bg-soft);
+  border-color: var(--primary);
+  color: var(--primary-dark);
+}
+
+.calc-result-box {
+  background: linear-gradient(135deg, #fff8f3, #ffece0);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.calc-result-box .result-title {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.calc-result-box .result-value {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.calc-result-box .result-unit {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 20px;
+}
+
+.calc-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  background: white;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid #f1dfd2;
+}
+
+.calc-details-grid div {
+  text-align: left;
+}
+
+.calc-details-grid div span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: block;
+}
+
+.calc-details-grid div strong {
+  font-size: 1.1rem;
+  color: #2d3748;
+}
+
+/* 🌟 동물병원 예방접종 & 목욕 수첩 */
+.tabs-container {
+  margin-bottom: 30px;
+}
+
+.tabs-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: white;
+  border: 2px solid var(--border-color);
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 14px rgba(255, 112, 67, 0.3);
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.health-table-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.health-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+.health-table th, .health-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1dfd2;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.health-table th {
+  background: #fdf6f0;
+  color: #4a5568;
+  font-weight: 700;
+}
+
+.health-table tr:hover {
+  background-color: #fffcf8;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.status-done { background: #e8f5e9; color: #2e7d32; }
+.status-pending { background: #fff3e0; color: #ef6c00; }
+
+/* 🌟 목욕 & 피부 골든룰 카드 */
+.bathing-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.guide-box {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.guide-box.highlight {
+  border: 2px solid var(--primary);
+  background: #fff8f4;
+}
+
+.guide-box h4 {
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.guide-box p {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* 🌟 알레르기 & 독성 식재료 백과 */
+.search-filter-bar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.search-input-wrapper {
+  flex: 1;
+  min-width: 260px;
+  position: relative;
+}
+
+.search-input-wrapper input {
+  width: 100%;
+  padding: 12px 16px 12px 42px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+}
+
+.search-input-wrapper .search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.food-card {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 20px;
+  border: 1px solid #ffd5cc;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+
+.food-card.danger {
+  border-top: 4px solid var(--accent-warn);
+}
+
+.food-card.allergy {
+  border-top: 4px solid var(--accent-dog);
+}
+
+.food-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.food-card-header h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.danger-badge {
+  background: #ffebee;
+  color: var(--accent-warn);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.food-card p {
+  font-size: 0.85rem;
+  color: #4a5568;
+}
+
+/* 🌟 1:1 맞춤 식단 상담 & 레시피 생성 폼 */
+.custom-order-section {
+  background: linear-gradient(180deg, var(--bg-main) 0%, #fff0e5 100%);
+  padding: 80px 0;
+}
+
+.order-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.form-sheet {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  border: 2px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.prescription-preview {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  border: 2px dashed var(--primary);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.prescription-header {
+  text-align: center;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.prescription-header h3 {
+  font-size: 1.4rem;
+  color: var(--primary-dark);
+}
+
+.btn-print {
+  margin-top: 20px;
+  background: #2d3748;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.btn-print:hover {
+  background: #1a202c;
+}
+
+/* 🌟 푸터 */
+.site-footer {
+  background: #2d3748;
+  color: #e2e8f0;
+  padding: 50px 0 30px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-bottom: 1px solid #4a5568;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: white;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #a0aec0;
+}
+
+/* 📱 반응형 미디어 쿼리 */
+@media (max-width: 992px) {
+  .hero-grid, .calculator-card, .order-container {
+    grid-template-columns: 1fr;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 1.9rem;
+  }
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+  .calc-details-grid {
+    grid-template-columns: 1fr;
+  }
+}

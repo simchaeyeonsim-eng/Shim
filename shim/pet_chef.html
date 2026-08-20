@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐾 펫 다이닝 셰프 & 반려견·반려묘 건강수첩 | Pet Gourmet & Health Handbook</title>
+  <meta name="description" content="반려견과 반려묘를 위한 100% 휴먼그레이드 맞춤 자연식 셰프 프로필, 실제 사진 갤러리, 영양 분석표, 동물병원 예방접종 수첩, 목욕 주기 가이드">
+  <link rel="stylesheet" href="css/pet_chef.css">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+</head>
+<body>
+
+  <!-- 🌟 상단 네비게이션 -->
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="#" class="brand-logo">
+        <div class="logo-icon">🐾</div>
+        <div>
+          <h1>펫 다이닝 <span>& 헬스케어</span></h1>
+          <span>Pet Gourmet & Veterinary Care</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#profile">셰프 소개</a></li>
+        <li><a href="#gallery">📸 견묘 실사 갤러리</a></li>
+        <li><a href="#menu">시그니처 미식</a></li>
+        <li><a href="#calculator">영양·급여량 계산기</a></li>
+        <li><a href="#vaccination">예방접종 수첩</a></li>
+        <li><a href="#bathing">목욕 골든룰</a></li>
+        <li><a href="#allergy">알레르기·위험 식재료</a></li>
+        <li><a href="#custom-order" class="btn-cta">📋 1:1 맞춤 식단 신청</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 🌟 히어로 셰프 프로필 섹션 (실사 배너 탑재) -->
+  <section class="hero-section" id="profile">
+    <div class="container hero-grid">
+      <div class="hero-text-col">
+        <div class="badge-tag">
+          <span>🍳</span> 반려동물 자연식 & 영양 케어 전문 셰프
+        </div>
+        <h2 class="hero-title">
+          강아지와 고양이의 행복한 미식,<br>
+          <span class="highlight">건강한 식탁</span>에서 시작됩니다.
+        </h2>
+        <p class="hero-desc">
+          사람보다 3배 예민한 아이들의 소화기관과 영양 요구량을 과학적으로 분석합니다. 
+          100% Human-Grade 신선 재료와 종(Species)별 맞춤 영양 설계로 반려 가족의 매 끼니에 따뜻한 활력을 선물합니다.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat-box">
+            <strong>100%</strong>
+            <span>휴먼그레이드 신선 원재료</span>
+          </div>
+          <div class="stat-box">
+            <strong>1.25 : 1</strong>
+            <span>칼슘:인 황금 영양 밸런스</span>
+          </div>
+          <div class="stat-box">
+            <strong>0%</strong>
+            <span>인공 보존제 및 감미료</span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="#menu" class="btn-cta" style="padding: 12px 28px; border-radius: 9999px; text-decoration: none;">🍽️ 시그니처 메뉴 보기</a>
+          <a href="#gallery" style="background: white; border: 1.5px solid var(--primary); color: var(--primary-dark); font-weight: 700; padding: 12px 24px; border-radius: 9999px; text-decoration: none;">📸 행복한 아이들 실사 보기</a>
+          <a href="#calculator" style="background: white; border: 1.5px solid var(--border-color); color: var(--text-main); font-weight: 700; padding: 12px 24px; border-radius: 9999px; text-decoration: none;">🧮 1일 급여량 계산</a>
+        </div>
+      </div>
+
+      <!-- 셰프 프로필 카드 -->
+      <div class="profile-card">
+        <div class="profile-card-badge">PRO PET CHEF</div>
+        
+        <!-- 실사 히어로 포토 프레임 -->
+        <div class="hero-photo-banner">
+          <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=800&q=80" alt="식사를 함께 즐기는 행복한 강아지와 고양이 실사" loading="lazy">
+          <span class="photo-tag">🐱🐶 함께 식사하는 행복한 견묘 가족</span>
+        </div>
+
+        <div class="chef-avatar-wrapper">
+          <div class="chef-avatar">👨‍🍳</div>
+          <div class="chef-info">
+            <h3>펫 셰프 & 뉴트리셔니스트</h3>
+            <p>Pet Dining & Nutrition Specialist</p>
+          </div>
+        </div>
+
+        <div class="chef-quote">
+          "반려동물에게 식사는 단순한 끼니가 아니라, 보호자와 나누는 매일의 건강한 사랑입니다."
+        </div>
+
+        <ul class="qualifications-list">
+          <li><span>🏅</span> 반려동물 영양관리지도사 1급 공인 취득</li>
+          <li><span>📜</span> AAFCO / NRC 영양 가이드라인 기반 식단 처방</li>
+          <li><span>🎂</span> 반려동물 펫 베이커리 & 자연식(화식) 마스터</li>
+          <li><span>🔬</span> 반려견·반려묘 식이 알레르기 및 배제식단(LID) 전문</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌟 📸 행복한 애견 & 애묘 실사 갤러리 섹션 -->
+  <section class="section" id="gallery" style="background: #ffffff;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Happy Moments Gallery</span>
+        <h2>풍성한 미식을 즐기는 행복한 애견 & 애묘</h2>
+        <p>셰프의 맞춤 자연식과 세심한 케어로 건강하고 행복하게 빛나는 아이들의 실제 순간들입니다.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- 갤러리 1: 행복한 강아지 -->
+        <div class="gallery-card">
+          <div class="gallery-img-box">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=800&q=80" alt="건강하고 밝게 웃는 골든 리트리버 실사" loading="lazy">
+            <span class="gallery-card-badge">🐶 Golden Retriever</span>
+          </div>
+          <div class="gallery-info">
+            <h4>"식사 시간이 제일 기다려져요!"</h4>
+            <p>자연식 전환 3주 후 윤기 나는 황금빛 모질과 활력 넘치는 미소</p>
+          </div>
+        </div>
+
+        <!-- 갤러리 2: 행복한 고양이 -->
+        <div class="gallery-card">
+          <div class="gallery-img-box">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=800&q=80" alt="촉촉한 대구 무스 스튜를 맛보고 만족한 고양이 실사" loading="lazy">
+            <span class="gallery-card-badge">🐱 Lovely Cat</span>
+          </div>
+          <div class="gallery-info">
+            <h4>"음수량이 2배로 늘었어요!"</h4>
+            <p>대구 & 닭안심 벨벳 무스 스튜로 음수량 82% 충전 완료</p>
+          </div>
+        </div>
+
+        <!-- 갤러리 3: 강아지와 고양이 절친 -->
+        <div class="gallery-card">
+          <div class="gallery-img-box">
+            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=800&q=80" alt="함께 다정하게 식사 후 휴식 중인 강아지와 고양이" loading="lazy">
+            <span class="gallery-card-badge">🐾 Best Friends</span>
+          </div>
+          <div class="gallery-info">
+            <h4>견묘 동시 맞춤 듀오 테린</h4>
+            <p>강아지와 고양이가 한자리에서 평화롭고 맛있게 즐기는 건강식</p>
+          </div>
+        </div>
+
+        <!-- 갤러리 4: 목욕 케어 후 보송보송한 강아지 -->
+        <div class="gallery-card">
+          <div class="gallery-img-box">
+            <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=800&q=80" alt="목욕 후 보송보송하게 타월 케어 중인 귀여운 강아지" loading="lazy">
+            <span class="gallery-card-badge">🛁 Spa & Bathing</span>
+          </div>
+          <div class="gallery-info">
+            <h4>"3주 주기 안심 목욕 완료!"</h4>
+            <p>저자극 보습 스파와 지간 100% 완전 건조로 피부염 완벽 예방</p>
+          </div>
+        </div>
+
+        <!-- 갤러리 5: 특식을 기다리는 강아지 -->
+        <div class="gallery-card">
+          <div class="gallery-img-box">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80" alt="맛있는 특식을 기대하는 초롱초롱한 비글 실사" loading="lazy">
+            <span class="gallery-card-badge">🍖 Gourmet Treat</span>
+          </div>
+          <div class="gallery-info">
+            <h4>초롱초롱한 눈빛의 비결</h4>
+            <p>식이 알레르기 원인을 배제한 오리 안심 & 블루베리 영양식</p>
+          </div>
+        </div>
+
+        <!-- 갤러리 6: 편안하고 윤기 나는 고양이 -->
+        <div class="gallery-card">
+          <div class="gallery-img-box">
+            <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=800&q=80" alt="고급스러운 털결을 뽐내며 휴식 중인 고양이" loading="lazy">
+            <span class="gallery-card-badge">✨ Shiny Coat</span>
+          </div>
+          <div class="gallery-info">
+            <h4>타우린 & 오메가-3의 힘</h4>
+            <p>심근 건강과 헤어볼 배출을 동시에 케어하는 셰프의 시크릿 레시피</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌟 시그니처 메뉴 & 영양 밸런스 섹션 (메뉴별 실사 탑재) -->
+  <section class="section" id="menu" style="background: #fffaf5;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Signature Gourmet & Nutrition</span>
+        <h2>행복한 반려 식탁 시그니처 메뉴</h2>
+        <p>견묘의 영양 생리학적 특성을 철저히 반영하여 정성껏 조리한 프리미엄 자연식입니다.</p>
+      </div>
+
+      <div class="menu-grid">
+        <!-- 메뉴 1 -->
+        <div class="recipe-card">
+          <div class="recipe-img-box">
+            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80" alt="신선한 연어와 채소로 만든 듀오 테린 실사" loading="lazy">
+          </div>
+          <div class="recipe-header">
+            <span class="recipe-target-badge badge-both">🐶🐱 강아지 & 고양이 공용</span>
+            <h3>연어 & 닭가슴살 듀오 테린</h3>
+            <p>촉촉한 수분과 오메가-3가 가득한 저온 스팀 퓨레 요리</p>
+          </div>
+          <div class="recipe-body">
+            <div class="ingredient-box">
+              <h4><span>🥕</span> 핵심 식재료 구성</h4>
+              <div class="ingredient-tags">
+                <span class="ing-tag">무항생제 닭안심 50%</span>
+                <span class="ing-tag">생물 연어 30%</span>
+                <span class="ing-tag">단호박 퓨레 10%</span>
+                <span class="ing-tag">데친 브로콜리 8%</span>
+                <span class="ing-tag">타우린 & 난각칼슘 2%</span>
+              </div>
+            </div>
+
+            <table class="nutrition-table">
+              <thead>
+                <tr>
+                  <th>영양 성분</th>
+                  <th>함량</th>
+                  <th>주요 효능</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>조단백질</td>
+                  <td><strong>18.5%</strong></td>
+                  <td>근육 형성 및 면역 항체 강화</td>
+                </tr>
+                <tr>
+                  <td>조지방</td>
+                  <td><strong>6.2%</strong></td>
+                  <td>DHA/EPA 풍부, 피모 윤택</td>
+                </tr>
+                <tr>
+                  <td>수분 함량</td>
+                  <td><strong>72.0%</strong></td>
+                  <td>요로 결석 및 탈수 예방</td>
+                </tr>
+                <tr>
+                  <td>칼슘 : 인</td>
+                  <td><strong>1.25 : 1</strong></td>
+                  <td>신장 부담 없는 황금 비율</td>
+                </tr>
+                <tr>
+                  <td>열량 (100g)</td>
+                  <td><strong>132 kcal</strong></td>
+                  <td>기호성 98%, 소화율 94%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 메뉴 2 -->
+        <div class="recipe-card">
+          <div class="recipe-img-box">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="오리 안심과 단호박 블루베리 리조또 실사" loading="lazy">
+          </div>
+          <div class="recipe-header">
+            <span class="recipe-target-badge badge-dog">🐶 반려견 전용 특식</span>
+            <h3>오리 안심 & 블루베리 단호박 리조또</h3>
+            <p>눈물 자국 완화와 식이 알레르기 케어를 위한 저자극 영양식</p>
+          </div>
+          <div class="recipe-body">
+            <div class="ingredient-box">
+              <h4><span>🫐</span> 핵심 식재료 구성</h4>
+              <div class="ingredient-tags">
+                <span class="ing-tag">신선 오리안심 52%</span>
+                <span class="ing-tag">찐 단호박 20%</span>
+                <span class="ing-tag">불린 귀리 8%</span>
+                <span class="ing-tag">생 블루베리 4%</span>
+                <span class="ing-tag">초록입홍합 오일</span>
+              </div>
+            </div>
+
+            <table class="nutrition-table">
+              <thead>
+                <tr>
+                  <th>영양 성분</th>
+                  <th>함량</th>
+                  <th>주요 효능</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>조단백질</td>
+                  <td><strong>17.0%</strong></td>
+                  <td>저자극 고품질 단일 단백질</td>
+                </tr>
+                <tr>
+                  <td>조지방</td>
+                  <td><strong>5.0%</strong></td>
+                  <td>불포화 지방산 풍부</td>
+                </tr>
+                <tr>
+                  <td>안토시아닌</td>
+                  <td><strong>강화</strong></td>
+                  <td>눈 건강 & 활성산소 억제</td>
+                </tr>
+                <tr>
+                  <td>칼슘 : 인</td>
+                  <td><strong>1.30 : 1</strong></td>
+                  <td>골격 및 치아 건강 유지</td>
+                </tr>
+                <tr>
+                  <td>열량 (100g)</td>
+                  <td><strong>125 kcal</strong></td>
+                  <td>소화 흡수율 우수</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 메뉴 3 -->
+        <div class="recipe-card">
+          <div class="recipe-img-box">
+            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80" alt="부드러운 대구살과 닭안심 벨벳 무스 스튜 실사" loading="lazy">
+          </div>
+          <div class="recipe-header">
+            <span class="recipe-target-badge badge-cat">🐱 반려묘 전용 특식</span>
+            <h3>알래스카 대구 & 닭안심 무스 스튜</h3>
+            <p>음수량 82% 충전과 하부 요로계(FLUTD) 집중 케어</p>
+          </div>
+          <div class="recipe-body">
+            <div class="ingredient-box">
+              <h4><span>🐟</span> 핵심 식재료 구성</h4>
+              <div class="ingredient-tags">
+                <span class="ing-tag">순살 대구살 45%</span>
+                <span class="ing-tag">닭가슴살 30%</span>
+                <span class="ing-tag">맑은 닭육수 17.5%</span>
+                <span class="ing-tag">단호박 퓨레 5%</span>
+                <span class="ing-tag">필수 타우린 99% 0.8g</span>
+              </div>
+            </div>
+
+            <table class="nutrition-table">
+              <thead>
+                <tr>
+                  <th>영양 성분</th>
+                  <th>함량</th>
+                  <th>주요 효능</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>조단백질</td>
+                  <td><strong>19.0%</strong></td>
+                  <td>육식동물 필수 고단백</td>
+                </tr>
+                <tr>
+                  <td>수분 함량</td>
+                  <td><strong>82.0%</strong></td>
+                  <td>비뇨기 결석 완벽 예방</td>
+                </tr>
+                <tr>
+                  <td>타우린</td>
+                  <td><strong>120mg+</strong></td>
+                  <td>심장병(DCM) & 시력 보호</td>
+                </tr>
+                <tr>
+                  <td>크릴 오일</td>
+                  <td><strong>2ml</strong></td>
+                  <td>오메가-3 항염 작용</td>
+                </tr>
+                <tr>
+                  <td>열량 (100g)</td>
+                  <td><strong>98 kcal</strong></td>
+                  <td>부드러운 벨벳 무스 식감</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌟 인터랙티브 칼로리 & 급여량 계산기 섹션 -->
+  <section class="section" id="calculator" style="background: #fff8f2;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive RER / MER Calculator</span>
+        <h2>우리 아이 맞춤 1일 칼로리 & 급여량 계산기</h2>
+        <p>수의학 표준 공식(NRC/AAFCO)에 기반하여 아이의 체중과 상태에 맞는 정확한 급여량을 즉시 계산해 드립니다.</p>
+      </div>
+
+      <div class="calculator-card">
+        <div class="calc-form-col">
+          <div class="form-group">
+            <label>반려동물 구분</label>
+            <div class="radio-pills">
+              <input type="radio" id="sp_dog" name="calc_species" value="dog" checked>
+              <label for="sp_dog">🐶 반려견 (강아지)</label>
+              <input type="radio" id="sp_cat" name="calc_species" value="cat">
+              <label for="sp_cat">🐱 반려묘 (고양이)</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="calc_weight">현재 체중 (kg)</label>
+            <input type="number" id="calc_weight" class="form-control" value="5.0" step="0.1" min="0.5" max="80">
+          </div>
+
+          <div class="form-group">
+            <label for="calc_factor">생애주기 및 활동 상태</label>
+            <select id="calc_factor" class="form-control">
+              <option value="1.6">중성화 완료 성견 (보통 활동량)</option>
+              <option value="1.8">미중성화 성견 (활동적)</option>
+              <option value="1.1">체중 감량 / 다이어트견</option>
+              <option value="2.5">성장기 퍼피 (생후 4개월~1년)</option>
+              <option value="2.0">활동량 매우 많은 운동/어질리티견</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="calc_meals">하루 식사 횟수</label>
+            <select id="calc_meals" class="form-control">
+              <option value="2">하루 2회 급여 (아침, 저녁)</option>
+              <option value="3">하루 3회 급여 (아침, 점심, 저녁)</option>
+              <option value="1">하루 1회 급여</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="calc-result-col">
+          <div class="calc-result-box">
+            <span class="result-title">1일 권장 맞춤 자연식 총량</span>
+            <div class="result-value" id="res_daily_gram">185g</div>
+            <div class="result-unit" id="res_per_meal_unit">1끼당 약 <strong id="res_per_meal_gram" style="color:var(--primary-dark)">93g</strong> 급여</div>
+
+            <div class="calc-details-grid">
+              <div>
+                <span>기초 대사량 (RER)</span>
+                <strong id="res_rer">234 kcal</strong>
+              </div>
+              <div>
+                <span>1일 권장 열량 (MER)</span>
+                <strong id="res_mer">375 kcal</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌟 동물병원 나이별 예방접종 & 목욕 수첩 섹션 -->
+  <section class="section" id="vaccination">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Veterinary Health Record</span>
+        <h2>동물병원 예방접종 & 건강 관리 수첩</h2>
+        <p>생애주기별 필수 접종과 건강 검진을 체계적으로 체크하고 기록하세요. (클릭하여 상태 변경 가능)</p>
+      </div>
+
+      <div class="tabs-container">
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-target="tab-dog-vac">🐶 반려견 접종 수첩</button>
+          <button class="tab-btn" data-target="tab-cat-vac">🐱 반려묘 접종 수첩</button>
+          <button class="tab-btn" data-target="tab-bath-diary">🛁 목욕 & 스킨케어 다이어리</button>
+        </div>
+
+        <!-- 🐶 강아지 접종 탭 -->
+        <div class="tab-pane active" id="tab-dog-vac">
+          <div class="health-table-card">
+            <table class="health-table">
+              <thead>
+                <tr>
+                  <th>구분 / 차수</th>
+                  <th>권장 시기</th>
+                  <th>접종 백신 항목</th>
+                  <th>예방 질환 및 비고</th>
+                  <th>접종 상태 (클릭)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>기초 1차</strong></td>
+                  <td>생후 6~8주</td>
+                  <td>DHPPL 1차 + 코로나 장염 1차</td>
+                  <td>홍역, 간염, 파보장염, 파라인플루엔자</td>
+                  <td><span class="status-badge status-done status-toggle">✅ 완료</span></td>
+                </tr>
+                <tr>
+                  <td><strong>기초 2차</strong></td>
+                  <td>생후 8~10주</td>
+                  <td>DHPPL 2차 + 코로나 장염 2차</td>
+                  <td>소화기 바이러스 항체 형성</td>
+                  <td><span class="status-badge status-done status-toggle">✅ 완료</span></td>
+                </tr>
+                <tr>
+                  <td><strong>기초 3차</strong></td>
+                  <td>생후 10~12주</td>
+                  <td>DHPPL 3차 + 켄넬코프 1차</td>
+                  <td>전염성 기관지염 예방</td>
+                  <td><span class="status-badge status-done status-toggle">✅ 완료</span></td>
+                </tr>
+                <tr>
+                  <td><strong>기초 4차</strong></td>
+                  <td>생후 12~14주</td>
+                  <td>DHPPL 4차 + 켄넬코프 2차 + 신종플루 1차</td>
+                  <td>호흡기 인플루엔자 복합 예방</td>
+                  <td><span class="status-badge status-pending status-toggle">⏳ 예정</span></td>
+                </tr>
+                <tr>
+                  <td><strong>기초 5차</strong></td>
+                  <td>생후 14~16주</td>
+                  <td>DHPPL 5차 + 신종플루 2차 + 광견병</td>
+                  <td>광견병 법정 의무 접종 (생후 3개월령 이상)</td>
+                  <td><span class="status-badge status-pending status-toggle">⏳ 예정</span></td>
+                </tr>
+                <tr>
+                  <td><strong>항체가 검사</strong></td>
+                  <td>5차 접종 2주 후</td>
+                  <td>혈액 항체 타이틀 검사</td>
+                  <td>각 백신별 방어 항체 수치 판정 (Pass)</td>
+                  <td><span class="status-badge status-pending status-toggle">⏳ 예정</span></td>
+                </tr>
+                <tr>
+                  <td><strong>연간 보강접종</strong></td>
+                  <td>성견 (매년 1회)</td>
+                  <td>종합 + 광견병 + 켄넬코프 + 독감</td>
+                  <td>평생 면역력 유지</td>
+                  <td><span class="status-badge status-pending status-toggle">⏳ 예정</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 🐱 고양이 접종 탭 -->
+        <div class="tab-pane" id="tab-cat-vac">
+          <div class="health-table-card">
+            <table class="health-table">
+              <thead>
+                <tr>
+                  <th>구분 / 차수</th>
+                  <th>권장 시기</th>
+                  <th>접종 백신 항목</th>
+                  <th>예방 질환 및 비고</th>
+                  <th>접종 상태 (클릭)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>기초 1차</strong></td>
+                  <td>생후 8~9주</td>
+                  <td>FVRCP 1차 (고양이 3종 종합백신)</td>
+                  <td>범백혈구감소증, 허피스, 칼리시바이러스</td>
+                  <td><span class="status-badge status-done status-toggle">✅ 완료</span></td>
+                </tr>
+                <tr>
+                  <td><strong>기초 2차</strong></td>
+                  <td>생후 11~12주</td>
+                  <td>FVRCP 2차 + 백혈병(FeLV 1차 선택)</td>
+                  <td>외출묘 / 다묘가정 필수 권장</td>
+                  <td><span class="status-badge status-done status-toggle">✅ 완료</span></td>
+                </tr>
+                <tr>
+                  <td><strong>기초 3차</strong></td>
+                  <td>생후 15~16주</td>
+                  <td>FVRCP 3차 + FeLV 2차 + 광견병</td>
+                  <td>3개월령 이상 광견병 접종 완료</td>
+                  <td><span class="status-badge status-pending status-toggle">⏳ 예정</span></td>
+                </tr>
+                <tr>
+                  <td><strong>항체가 검사</strong></td>
+                  <td>3차 접종 2주 후</td>
+                  <td>혈액 항체 수치 측정</td>
+                  <td>방어 면역 형성 유무 확인</td>
+                  <td><span class="status-badge status-pending status-toggle">⏳ 예정</span></td>
+                </tr>
+                <tr>
+                  <td><strong>연간 보강접종</strong></td>
+                  <td>성묘 (매년 1회)</td>
+                  <td>FVRCP 보강 + 광견병</td>
+                  <td>매년 면역 지속</td>
+                  <td><span class="status-badge status-pending status-toggle">⏳ 예정</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 🛁 목욕 기록 다이어리 탭 -->
+        <div class="tab-pane" id="tab-bath-diary">
+          <div class="health-table-card">
+            <table class="health-table">
+              <thead>
+                <tr>
+                  <th>목욕 일자</th>
+                  <th>체중(kg)</th>
+                  <th>사용 샴푸 / 스파</th>
+                  <th>피부 & 모질 상태</th>
+                  <th>다음 목욕 주기</th>
+                  <th>특이사항 / 접종 연계</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2026.08.10</td>
+                  <td>4.8 kg</td>
+                  <td>세라마이드 저자극 보습 샴푸</td>
+                  <td>각질 없음, 모질 매우 부드러움</td>
+                  <td>2026.08.31 (3주 후)</td>
+                  <td>접종 완료 10일 후 편안히 진행</td>
+                </tr>
+                <tr>
+                  <td>2026.07.20</td>
+                  <td>4.7 kg</td>
+                  <td>약용 클로르헥시딘 샴푸</td>
+                  <td>지간 붉은기 완화</td>
+                  <td>2026.08.10 (3주 후)</td>
+                  <td>목욕 후 발가락 사이 100% 완전 건조</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌟 목욕 주기 & 골든룰 가이드 -->
+  <section class="section" id="bathing" style="background: white;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Bathing Timing & Golden Rules</span>
+        <h2>목욕은 언제 시켜야 할까요? 4대 골든룰</h2>
+        <p>반려동물 피부는 사람보다 3배 얇은 약알칼리성(pH 7.0~7.5)입니다. 올바른 타이밍과 수칙을 지켜주세요.</p>
+      </div>
+
+      <div class="bathing-guide-grid">
+        <div class="guide-box highlight">
+          <h4><span>💉</span> 백신 접종 전후 골든룰</h4>
+          <p>
+            • <strong>접종 2~3일 전</strong>: 미리 목욕을 시켜 청결 유지<br>
+            • <strong>접종 후 7~10일간</strong>: <strong>목욕 절대 금지!</strong> 면역 형성 중 체온 저하와 스트레스를 방지해야 합니다.
+          </p>
+        </div>
+
+        <div class="guide-box">
+          <h4><span>🐶</span> 강아지 권장 주기</h4>
+          <p>
+            • <strong>실내 성견</strong>: <strong>2~3주에 1회</strong><br>
+            • <strong>산책 후</strong>: 전신 목욕 대신 미온수 물수건이나 풋워셔로 발과 배만 부분 세정합니다.
+          </p>
+        </div>
+
+        <div class="guide-box">
+          <h4><span>🐱</span> 고양이 권장 주기</h4>
+          <p>
+            • <strong>단모종</strong>: <strong>6개월~1년에 1회</strong> (스스로 그루밍)<br>
+            • <strong>장모종</strong>: 2~3개월에 1회 (매일 빗질로 헤어볼 예방이 더 중요)
+          </p>
+        </div>
+
+        <div class="guide-box">
+          <h4><span>💧</span> 외부 구충제 도포 시</h4>
+          <p>
+            • 목 뒤 바르는 구충제(스팟온) 도포 <strong>전 48시간 ~ 후 48시간(총 4일)</strong>은 목욕을 피해야 약물이 피지선을 타고 정상 흡수됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌟 식이 알레르기 & 위험 식재료 백과 -->
+  <section class="section" id="allergy" style="background: #fffaf5;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Food Allergy & Toxic Warning</span>
+        <h2>식이 알레르기 주의점 & 절대 금지 식재료</h2>
+        <p>식재료명을 검색하거나 필터를 선택하여 위험도와 응급 주의사항을 확인하세요.</p>
+      </div>
+
+      <div class="search-filter-bar">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="foodSearchInput" placeholder="식재료명 검색 (예: 양파, 초콜릿, 포도, 소고기, 자일리톨)">
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button class="tab-btn food-filter-btn active" data-filter="all">전체 보기</button>
+          <button class="tab-btn food-filter-btn" data-filter="danger">🚨 절대 금지 독성</button>
+          <button class="tab-btn food-filter-btn" data-filter="allergy">🌾 주요 알레르기원</button>
+        </div>
+      </div>
+
+      <div class="food-grid">
+        <!-- 위험 1: 양파/마늘 -->
+        <div class="food-card danger" data-name="양파 마늘 파 부추" data-type="danger">
+          <div class="food-card-header">
+            <h4>🧅 양파 / 마늘 / 파</h4>
+            <span class="danger-badge">치명적 독성</span>
+          </div>
+          <p><strong>위험 원인</strong>: N-프로필 다이설파이드<br>
+          <strong>증상</strong>: 적혈구 파괴, <strong>급성 용혈성 빈혈</strong>, 혈뇨. 특히 고양이는 적혈구 취약성이 3배 높아 극소량도 치명적입니다.</p>
+        </div>
+
+        <!-- 위험 2: 초콜릿/카페인 -->
+        <div class="food-card danger" data-name="초콜릿 코코아 커피 녹차 카페인" data-type="danger">
+          <div class="food-card-header">
+            <h4>🍫 초콜릿 / 카페인</h4>
+            <span class="danger-badge">치명적 독성</span>
+          </div>
+          <p><strong>위험 원인</strong>: 테오브로민, 카페인<br>
+          <strong>증상</strong>: 중추신경계 마비, 심근 흥분, 경련, 부정맥 및 급성 심장마비 유발.</p>
+        </div>
+
+        <!-- 위험 3: 포도 -->
+        <div class="food-card danger" data-name="포도 건포도 청포도 샤인머스캣" data-type="danger">
+          <div class="food-card-header">
+            <h4>🍇 포도 / 건포도</h4>
+            <span class="danger-badge">신부전 위험</span>
+          </div>
+          <p><strong>위험 원인</strong>: 주석산 (Tartaric acid)<br>
+          <strong>증상</strong>: 섭취 후 수 시간 내 <strong>급성 신부전</strong>, 핍뇨, 구토 및 혼수 유발.</p>
+        </div>
+
+        <!-- 위험 4: 자일리톨 -->
+        <div class="food-card danger" data-name="자일리톨 껌 치약 무설탕" data-type="danger">
+          <div class="food-card-header">
+            <h4>🍬 자일리톨 (Xylitol)</h4>
+            <span class="danger-badge">쇼크 위험</span>
+          </div>
+          <p><strong>위험 원인</strong>: 급격한 인슐린 폭발 분비<br>
+          <strong>증상</strong>: 극심한 <strong>저혈당 쇼크</strong> 및 급성 간 괴사/간부전 발생.</p>
+        </div>
+
+        <!-- 알레르기 1: 소고기 -->
+        <div class="food-card allergy" data-name="소고기 비프 육류" data-type="allergy">
+          <div class="food-card-header">
+            <h4>🥩 소고기 (Beef)</h4>
+            <span class="status-badge status-pending">흔한 알레르겐</span>
+          </div>
+          <p><strong>특징</strong>: 반려동물 식이 알레르기 1위 유발 단백질. 눈물 착색, 발 가려움(지간염), 귀 염증 발생 시 오리나 캥거루로 단백질원 교체 권장.</p>
+        </div>
+
+        <!-- 알레르기 2: 유제품 -->
+        <div class="food-card allergy" data-name="우유 치즈 유제품 락토오스" data-type="allergy">
+          <div class="food-card-header">
+            <h4>🥛 일반 우유 / 유제품</h4>
+            <span class="status-badge status-pending">유당 불내증</span>
+          </div>
+          <p><strong>특징</strong>: 유당 분해 효소(락타아제) 결핍으로 심한 설사와 복통 유발. 락토프리 또는 펫 전용 밀크만 급여해야 합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌟 1:1 맞춤 식단 상담 & 실시간 레시피 발급 폼 -->
+  <section class="custom-order-section" id="custom-order">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Custom Prescription</span>
+        <h2>1:1 맞춤 자연식 상담 & 처방 레시피 발급</h2>
+        <p>우리 아이의 정보를 입력하시면 셰프의 맞춤 영양 레시피 카드가 즉시 생성되며 인쇄할 수 있습니다.</p>
+      </div>
+
+      <div class="order-container">
+        <!-- 입력 폼 -->
+        <form class="form-sheet" id="customConsultForm">
+          <h3 style="margin-bottom: 20px; font-size: 1.25rem; color: var(--primary-dark);">📝 반려동물 맞춤 정보 입력</h3>
+          
+          <div class="form-group">
+            <label>아이 이름</label>
+            <input type="text" name="pet_name" class="form-control" value="뽀삐" placeholder="아이 이름을 입력하세요">
+          </div>
+
+          <div class="form-group">
+            <label>반려동물 종류</label>
+            <div class="radio-pills">
+              <input type="radio" id="cf_dog" name="pet_type" value="dog" checked>
+              <label for="cf_dog">🐶 반려견</label>
+              <input type="radio" id="cf_cat" name="pet_type" value="cat">
+              <label for="cf_cat">🐱 반려묘</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>현재 체중 (kg)</label>
+            <input type="number" name="pet_weight" class="form-control" value="4.5" step="0.1">
+          </div>
+
+          <div class="form-group">
+            <label>맞춤 식단 목표</label>
+            <select name="pet_goal" class="form-control">
+              <option value="눈물 자국 완화 & 알레르기 케어">눈물 자국 완화 & 알레르기 케어 (LID)</option>
+              <option value="체중 조절 & 비만 다이어트">체중 조절 & 비만 다이어트</option>
+              <option value="신장 & 요로 결석 예방 (수분 충전)">신장 & 요로 결석 예방 (수분 80%+)</option>
+              <option value="노령기 관절 & 항산화 활력 케어">노령기 관절 & 항산화 활력 케어</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>선호하는 단백질 (예: 오리, 연어, 대구, 닭가슴살)</label>
+            <input type="text" name="pet_protein" class="form-control" value="신선 오리 안심, 닭가슴살">
+          </div>
+
+          <div class="form-group">
+            <label>기피 식재료 또는 확인된 알레르기</label>
+            <input type="text" name="pet_allergies" class="form-control" value="소고기, 밀가루, 계란">
+          </div>
+        </form>
+
+        <!-- 실시간 처방전 미리보기 -->
+        <div class="prescription-preview">
+          <div class="prescription-header">
+            <span style="font-size: 0.85rem; font-weight: 800; color: var(--primary);">OFFICIAL PET CHEF RECIPE</span>
+            <h3 id="pv_name">뽀삐</h3>
+            <span style="font-size: 0.9rem; color: var(--text-muted);" id="pv_species">반려견 (Puppy/Dog)</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.95rem;">
+            <div><strong>⚖️ 관리 체중:</strong> <span id="pv_weight">4.5 kg</span></div>
+            <div><strong>🎯 식단 목표:</strong> <span id="pv_goal">눈물 자국 완화 & 알레르기 케어</span></div>
+            <div><strong>🥩 추천 주단백질:</strong> <span id="pv_proteins">신선 오리 안심, 닭가슴살</span></div>
+            <div><strong>🚫 배제 알레르겐:</strong> <span id="pv_allergies" style="color: var(--accent-warn);">소고기, 밀가루, 계란</span></div>
+            <div style="background: #fff4ec; padding: 14px; border-radius: var(--radius-md); border-left: 4px solid var(--primary);">
+              <div><strong>🔥 일일 권장 에너지:</strong> <span id="pv_kcal" style="font-weight: 800; color: var(--primary-dark);">345 kcal / 일</span></div>
+              <div style="margin-top: 4px;"><strong>🥣 1일 자연식 권장량:</strong> <span id="pv_gram" style="font-weight: 800; color: var(--primary-dark);">261g / 일 (끼당 약 130g)</span></div>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+              * 본 맞춤 식단 카드는 펫 셰프의 NRC/AAFCO 영양 설계 기준에 따라 계산되었습니다.
+            </div>
+          </div>
+
+          <button type="button" class="btn-print" id="btnPrintPrescription">
+            🖨️ 맞춤 처방 레시피 카드 인쇄 / PDF 저장
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌟 푸터 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          🐾 펫 다이닝 & 헬스케어 가이드
+        </div>
+        <div style="display: flex; gap: 20px; font-size: 0.9rem;">
+          <a href="index.html" style="color: #ffab91; text-decoration: none;">🌸 봄날의 디지털 동행 메인으로 이동</a>
+          <a href="#profile" style="color: #e2e8f0; text-decoration: none;">맨 위로 이동</a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        © 2026 Pet Gourmet & Veterinary Health Care. All rights reserved. 100% Human-Grade Culinary Standard.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/pet_chef.js"></script>
+</body>
+</html>

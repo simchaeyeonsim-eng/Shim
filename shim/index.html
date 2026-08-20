@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>봄날의 디지털 동행 | 미래의 컴퓨터 시니어 강사 심봄날</title>
+    <meta name="description" content="나이가 들수록 더 깊어지는 지혜와 다정함으로, 어르신들의 디지털 자립과 행복한 일상을 함께 걷는 컴퓨터 시니어 전문 강사 심봄날의 공식 홈페이지입니다.">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/spring.css">
+</head>
+<body>
+
+    <!-- 🌸 캔버스 벚꽃잎 애니메이션 레이어 -->
+    <canvas id="petalsCanvas"></canvas>
+
+    <!-- 🌸 시니어 배려 상단 접근성 바 -->
+    <aside class="accessibility-bar" aria-label="시니어 전용 보기 편한 설정">
+        <div class="container accessibility-inner">
+            <div class="accessibility-notice">
+                <span>🌱 <strong>어르신을 위한 편안한 화면 보기</strong> : 글자가 작으시면 확대 버튼을 눌러보세요!</span>
+            </div>
+            <div class="accessibility-controls">
+                <div class="zoom-btn-group">
+                    <span class="zoom-label">글자 크기</span>
+                    <button class="btn-zoom active" data-zoom="standard" title="기본 글자 크기">보통</button>
+                    <button class="btn-zoom" data-zoom="1" title="글자 1단계 확대">크게 (A+)</button>
+                    <button class="btn-zoom" data-zoom="2" title="글자 2단계 확대">더 크게 (A++)</button>
+                    <button class="btn-zoom" data-zoom="3" title="글자 3단계 확대">아주 크게 (A+++)</button>
+                </div>
+                <button id="togglePetalsBtn" class="btn-toggle-petals" title="벚꽃잎 애니메이션 끄기/켜기">
+                    🌸 <span>꽃잎 끄기</span>
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 🌸 메인 헤더 & 네비게이션 -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">
+                <span class="logo-flower">🌸</span>
+                <div class="brand-text">
+                    <h1>봄날의 <span>디지털 동행</span></h1>
+                    <span class="brand-subtitle">시니어 IT 라이프 전문 강사 심봄날</span>
+                </div>
+            </a>
+
+            <nav class="main-nav" aria-label="메인 메뉴">
+                <ul>
+                    <li><a href="#about">강사 소개</a></li>
+                    <li><a href="#roadmap">성장 로드맵</a></li>
+                    <li><a href="#curriculum">맞춤 교육과정</a></li>
+                    <li><a href="#activity">강사 활약상</a></li>
+                    <li><a href="#testimonials">수강생 이야기</a></li>
+                    <li><a href="#guestbook">봄날 방명록</a></li>
+                    <li><a href="pet_chef.html" style="color: #ff7043; font-weight: 700;">🐾 펫 다이닝</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <a href="#contact" class="btn-contact-header">
+                    <span>💌</span> 강의 의뢰하기
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="모바일 메뉴 열기">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 모바일 드로어 메뉴 -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="닫기">✕</button>
+        <div class="brand-logo" style="margin-bottom: 20px;">
+            <span class="logo-flower">🌸</span>
+            <div class="brand-text">
+                <strong style="font-size: 1.2rem; color:#ff7e67;">봄날의 디지털 동행</strong>
+            </div>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="#about">🌸 강사 소개</a></li>
+            <li><a href="#roadmap">🌱 성장 로드맵</a></li>
+            <li><a href="#curriculum">💻 맞춤 교육과정</a></li>
+            <li><a href="#activity">📸 강사 활약상</a></li>
+            <li><a href="#testimonials">💖 수강생 이야기</a></li>
+            <li><a href="#guestbook">📝 봄날 방명록</a></li>
+            <li><a href="pet_chef.html" style="color: #ff7043; font-weight: 700;">🐾 펫 다이닝 & 건강수첩</a></li>
+            <li><a href="#contact" style="color:#ff7e67;">💌 강의 문의하기</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- 🌸 히어로 섹션 (Hero Section) -->
+        <section class="hero-section" id="about">
+            <div class="sunlight-glow glow-hero-top"></div>
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span>🌸</span>
+                        <span>나이가 들수록 더 깊어지는 따스한 배움의 길</span>
+                    </div>
+                    <h2 class="hero-title">
+                        어르신들의 세상과<br>
+                        디지털 세상을 잇는<br>
+                        <span class="highlight-spring">따뜻한 봄날의 선생님</span>
+                    </h2>
+                    <p class="hero-lead">
+                        "컴퓨터와 스마트폰이 낯설고 두려우셨나요?<br>
+                        인생의 깊은 경륜을 담아, 가장 친절하고 다정한 눈높이로<br>
+                        여러분의 손을 잡고 디지털 세상의 봄길을 함께 걷겠습니다."
+                    </p>
+
+                    <div class="hero-quote-box">
+                        <p>“한 번 물어보신 것을 백 번 물어보셔도 늘 봄 햇살처럼 환하게 웃으며 알려드립니다.”</p>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#curriculum" class="btn-primary-large">
+                            <span>💻</span> 교육 프로그램 살펴보기
+                        </a>
+                        <a href="#contact" class="btn-secondary-large">
+                            <span>📞</span> 강의 & 출강 문의
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 히어로 우측 강사 프로필 카드 (실사 적용) -->
+                <div class="hero-visual">
+                    <div class="floating-spring-badge badge-top">
+                        <span class="floating-icon">🌱</span>
+                        <div class="floating-text">
+                            <strong>시니어 눈높이 맞춤 교육</strong>
+                            <span>어르신 눈높이 설명 100%</span>
+                        </div>
+                    </div>
+
+                    <div class="instructor-card-main">
+                        <div class="avatar-wrapper">
+                            <div class="avatar-frame">
+                                <video class="instructor-avatar-video" autoplay loop muted playsinline controls poster="images/instructor_profile.jpg">
+                                    <source src="내영상.mp4" type="video/mp4">
+                                    <source src="images/my_video.mp4" type="video/mp4">
+                                    <img src="images/instructor_profile.jpg" alt="시니어 전문 컴퓨터 강사 심봄날 프로필 실사 사진" class="instructor-avatar-img">
+                                </video>
+                            </div>
+                            <span class="avatar-badge-tag">▶ 봄날 영상</span>
+                        </div>
+
+                        <h3 class="instructor-name">심 봄 날 (Shim Bom-nal)</h3>
+                        <p class="instructor-title">시니어 전문 IT 라이프 & 디지털 소통 강사</p>
+
+                        <p class="instructor-motto">
+                            "배움에는 늦은 때가 없습니다.<br>
+                            디지털을 만나 다시 피어나는 어르신들의 빛나는 두 번째 봄날을 응원합니다."
+                        </p>
+
+                        <div class="hero-stats-mini">
+                            <div class="stat-item">
+                                <span class="stat-number">12년+</span>
+                                <span class="stat-label">강의 경력</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">1,400+</span>
+                                <span class="stat-label">출강 횟수</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">99.8%</span>
+                                <span class="stat-label">수강생 만족도</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="floating-spring-badge badge-bottom">
+                        <span class="floating-icon">💌</span>
+                        <div class="floating-text">
+                            <strong>복지관 & 지자체 러브콜</strong>
+                            <span>전국 은빛 강좌 인기 1위</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🌸 1. 나이와 함께 익어가는 성장 로드맵 (Roadmap Section) -->
+        <section class="roadmap-section" id="roadmap">
+            <div class="sunlight-glow glow-roadmap-mid"></div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">🌱 인생의 사계절과 성장 비전</span>
+                    <h2 class="section-title">나이가 들수록 더 깊어지는<br><span class="spring-gradient-text">시니어 강사의 성숙 로드맵</span></h2>
+                    <p class="section-desc">
+                        젊은 시절의 열정을 넘어, 나이가 더해질수록 풍부해지는 삶의 지혜와 깊은 공감력으로<br>
+                        세대를 잇는 최고의 시니어 IT 멘토로 끊임없이 진화합니다.
+                    </p>
+                </div>
+
+                <div class="roadmap-timeline">
+                    <!-- 50대 -->
+                    <div class="roadmap-card-wrapper">
+                        <div class="roadmap-marker">🌱</div>
+                        <div class="roadmap-card">
+                            <span class="roadmap-age-badge badge-sprout">50代 · 배움과 공감의 싹을 틔우다</span>
+                            <h3 class="roadmap-card-title">시니어 IT 교육의 첫걸음과 눈높이 교수법 연구</h3>
+                            <p class="roadmap-card-motto">“어려운 외래어와 영어를 어르신들의 다정한 우리말로 바꾸는 노력”</p>
+                            <ul class="roadmap-feature-list">
+                                <li>시니어 디지털 정보 격차의 심각성을 절감하고 전문 강사로 전향</li>
+                                <li>복지관 및 경로당 무료 컴퓨터 기초 봉사수업으로 현장 경험 축적</li>
+                                <li>글자 크기가 크고 따라하기 쉬운 『큰 글씨 스마트폰 첫걸음』 자체 교재 집필</li>
+                                <li>반복 질문에도 지치지 않는 <strong>'무한 다정 교수법'</strong> 원칙 확립</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 60대 -->
+                    <div class="roadmap-card-wrapper">
+                        <div class="roadmap-marker">🌸</div>
+                        <div class="roadmap-card">
+                            <span class="roadmap-age-badge badge-bloom">60代 · 활약의 꽃을 만개시키다</span>
+                            <h3 class="roadmap-card-title">지자체 핵심 명강사 & 디지털 자립 생태계 구축</h3>
+                            <p class="roadmap-card-motto">“키오스크 앞에서 당당해진 어르신들의 미소를 볼 때 가장 행복합니다”</p>
+                            <ul class="roadmap-feature-list">
+                                <li>전국 시·군·구 평생학습관, 노인복지관 연간 300회 이상 초빙 명강사 등극</li>
+                                <li><strong>'실생활 무인 키오스크 정복 챌린지'</strong> 기획 (패스트푸드, 병원, KTX 현장 실습)</li>
+                                <li>유튜브 채널 『봄날의 컴퓨터 교실』 운영 (구독자 10만 어르신들의 랜선 선생님)</li>
+                                <li>보이스피싱 및 스미싱 예방을 위한 <strong>'시니어 안전 스마트폰 지킴이'</strong> 양성</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 70대 -->
+                    <div class="roadmap-card-wrapper">
+                        <div class="roadmap-marker">🌳</div>
+                        <div class="roadmap-card">
+                            <span class="roadmap-age-badge badge-master">70代 · 삶의 지혜와 IT를 융합한 원로 마스터</span>
+                            <h3 class="roadmap-card-title">세대 공감 디지털 멘토 & 은빛 문화 저술가</h3>
+                            <p class="roadmap-card-motto">“최첨단 인공지능도 결국 사람의 온기와 사랑을 전하는 도구입니다”</p>
+                            <ul class="roadmap-feature-list">
+                                <li>인생의 경륜과 <strong>생성형 AI(ChatGPT, 음성 비서)</strong>를 접목한 감성 IT 교육 선도</li>
+                                <li>손주와 조부모가 함께 어울리는 <strong>'세대공감 디지털 페스티벌'</strong> 총괄 디렉터</li>
+                                <li>시니어 디지털 정보 격차 해소 공로로 <strong>정부 훈장 및 평생교육 대상</strong> 수상</li>
+                                <li>에세이 『은빛 청춘, 마우스로 봄날을 그리다』 출간 및 전국 릴레이 강연</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🌸 2. 맞춤형 교육 프로그램 (Curriculum Section) -->
+        <section class="curriculum-section" id="curriculum">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">💻 알기 쉽고 재미있는 맞춤 수업</span>
+                    <h2 class="section-title">두려움은 설렘으로, 일상은 편리하게!<br><span class="spring-gradient-text">봄날의 시니어 교육과정</span></h2>
+                    <p class="section-desc">
+                        기초부터 최신 인공지능까지, 어르신들의 생활 속 꼭 필요한 기능만 쏙쏙 골라<br>
+                        실습 위주로 재미있고 쉽게 가르쳐 드립니다.
+                    </p>
+                </div>
+
+                <div class="curriculum-grid">
+                    <!-- 과정 1 -->
+                    <div class="curriculum-card">
+                        <div class="curr-icon-box">📱</div>
+                        <span class="curr-level">초급 · 필수 코스</span>
+                        <h3 class="curr-title">스마트폰 & 무인 키오스크 완전 정복</h3>
+                        <p class="curr-desc">
+                            터치가 두려우셨던 분들도 단 4주 만에 병원 예약, KTX 승차권 예매, 햄버거 주문까지 척척 해내는 생활 밀착형 실습 과정입니다.
+                        </p>
+                        <div class="curr-topics">
+                            <h5>🌸 주요 학습 내용</h5>
+                            <ul>
+                                <li>글자 크기 키우기 & 보기 편한 화면 설정</li>
+                                <li>카카오톡 사진·동영상 전송 및 보이스톡</li>
+                                <li>병원 진료 접수, KTX/고속버스 예매 실습</li>
+                                <li>패스트푸드점 및 무인민원발급기 키오스크 실전</li>
+                            </ul>
+                        </div>
+                        <button class="btn-curr-inquiry" data-course="스마트폰 & 무인 키오스크 완전 정복">
+                            이 과정 강의 문의하기 →
+                        </button>
+                    </div>
+
+                    <!-- 과정 2 -->
+                    <div class="curriculum-card">
+                        <div class="curr-icon-box">💻</div>
+                        <span class="curr-level">중급 · 실생활 응용</span>
+                        <h3 class="curr-title">실생활 컴퓨터 & 안전한 인터넷 라이프</h3>
+                        <p class="curr-desc">
+                            컴퓨터 켜고 끄기부터 안전한 온라인 쇼핑, 정부24 민원서류 발급, 금융사기 예방까지 똑똑하고 안전한 인터넷 활용법을 배웁니다.
+                        </p>
+                        <div class="curr-topics">
+                            <h5>🌸 주요 학습 내용</h5>
+                            <ul>
+                                <li>마우스 클릭/더블클릭 완벽 마스터</li>
+                                <li>한글 문서 작성 및 예쁜 가족 초대장 만들기</li>
+                                <li>주민등록등본 등 인터넷 민원 서류 무료 발급</li>
+                                <li>스미싱·보이스피싱 판별 및 안전한 금융 관리</li>
+                            </ul>
+                        </div>
+                        <button class="btn-curr-inquiry" data-course="실생활 컴퓨터 & 안전한 인터넷 라이프">
+                            이 과정 강의 문의하기 →
+                        </button>
+                    </div>
+
+                    <!-- 과정 3 -->
+                    <div class="curriculum-card">
+                        <div class="curr-icon-box">🤖</div>
+                        <span class="curr-level">특화 · 최신 트렌드</span>
+                        <h3 class="curr-title">시니어 AI 친구 만들기 (생성형 AI 기초)</h3>
+                        <p class="curr-desc">
+                            말 한마디로 질문하고 답을 얻는 챗GPT와 음성 비서를 활용하여, 내 말동무가 되어주고 일상을 도와주는 똑똑한 인공지능 친구를 만납니다.
+                        </p>
+                        <div class="curr-topics">
+                            <h5>🌸 주요 학습 내용</h5>
+                            <ul>
+                                <li>스마트폰 음성 비서(빅스비, 시리)로 전화걸기/알람</li>
+                                <li>챗GPT와 대화하며 옛날 노래 가사 찾기</li>
+                                <li>AI로 손주를 위한 맞춤 동화책 및 시 짓기</li>
+                                <li>인공지능으로 여행 계획 및 건강 식단 추천받기</li>
+                            </ul>
+                        </div>
+                        <button class="btn-curr-inquiry" data-course="시니어 AI 친구 만들기">
+                            이 과정 강의 문의하기 →
+                        </button>
+                    </div>
+
+                    <!-- 과정 4 -->
+                    <div class="curriculum-card">
+                        <div class="curr-icon-box">🎬</div>
+                        <span class="curr-level">심화 · 감성 미디어</span>
+                        <h3 class="curr-title">스마트폰 인생 사진전 & 영상 앨범 제작</h3>
+                        <p class="curr-desc">
+                            사랑하는 가족과 꽃구경 사진을 예쁘게 보정하고, 감동적인 배경음악과 자막을 넣어 세상에 단 하나뿐인 인생 동영상을 만듭니다.
+                        </p>
+                        <div class="curr-topics">
+                            <h5>🌸 주요 학습 내용</h5>
+                            <ul>
+                                <li>스마트폰으로 인생 사진 잘 찍는 구도와 비결</li>
+                                <li>주름 쏙 지우고 화사하게 만드는 사진 보정법</li>
+                                <li>음악과 함께 흘러가는 가족 앨범 영상 제작</li>
+                                <li>가족 단톡방에 자랑하고 유튜브에 추억 남기기</li>
+                            </ul>
+                        </div>
+                        <button class="btn-curr-inquiry" data-course="스마트폰 인생 사진전 & 영상 앨범 제작">
+                            이 과정 강의 문의하기 →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🌸 3. 강사 활약상 & 포토 갤러리 (실사 사진 갤러리 적용) -->
+        <section class="activity-section" id="activity">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">📸 생생한 현장 이야기</span>
+                    <h2 class="section-title">웃음꽃 피어나는<br><span class="spring-gradient-text">강의 현장과 빛나는 활약상</span></h2>
+                    <p class="section-desc">
+                        복지관, 도서관, 주민센터에서 어르신들과 함께 호흡하며 만들어가는<br>
+                        가장 따뜻하고 감동적인 실제 현장 순간들을 전합니다.
+                    </p>
+                </div>
+
+                <div class="activity-filter-bar">
+                    <button class="filter-btn active" data-filter="all">전체 보기</button>
+                    <button class="filter-btn" data-filter="lecture">복지관/센터 강의 현장</button>
+                    <button class="filter-btn" data-filter="challenge">키오스크 현장 실습</button>
+                    <button class="filter-btn" data-filter="event">디지털 축제 & 시상식</button>
+                </div>
+
+                <div class="activity-grid">
+                    <!-- 카드 1 (실사 적용) -->
+                    <div class="activity-card" data-category="lecture">
+                        <div class="activity-thumb">
+                            <img src="images/classroom_teaching.jpg" alt="종로노인종합복지관 스마트폰 및 컴퓨터 교실 강의 현장 실사 사진" class="activity-real-img">
+                            <span class="activity-badge">복지관 강의</span>
+                            <span class="activity-date">2026. 05</span>
+                        </div>
+                        <div class="activity-content">
+                            <h3 class="activity-title">종로노인종합복지관 스마트폰 200% 활용 교실</h3>
+                            <p class="activity-text">
+                                40분의 어르신들과 함께한 8주간의 열정적인 수업! 강사님이 어르신의 손을 따뜻하게 잡고 마우스 사용법을 밀착 지도하며 전원 수료를 달성했습니다.
+                            </p>
+                            <div class="activity-tags">
+                                <span class="tag-item">#스마트폰기초</span>
+                                <span class="tag-item">#밀착지도</span>
+                                <span class="tag-item">#만족도100%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 카드 2 (실사 적용) -->
+                    <div class="activity-card" data-category="challenge">
+                        <div class="activity-thumb">
+                            <img src="images/kiosk_practice.jpg" alt="도심 속 키오스크 실전 체험단 매장 방문 실습 실사 사진" class="activity-real-img">
+                            <span class="activity-badge">현장 챌린지</span>
+                            <span class="activity-date">2026. 06</span>
+                        </div>
+                        <div class="activity-content">
+                            <h3 class="activity-title">두려움 제로! 도심 속 키오스크 실전 체험단 출동</h3>
+                            <p class="activity-text">
+                                강의실을 벗어나 인근 매장과 역사를 직접 방문하여, 어르신께서 스스로 메뉴를 선택하고 결제까지 완료하며 환한 미소를 지으셨습니다.
+                            </p>
+                            <div class="activity-tags">
+                                <span class="tag-item">#키오스크정복</span>
+                                <span class="tag-item">#실전체험</span>
+                                <span class="tag-item">#자신감상승</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 카드 3 (실사 적용) -->
+                    <div class="activity-card" data-category="event">
+                        <div class="activity-thumb">
+                            <img src="images/award_ceremony.jpg" alt="대한민국 어르신 디지털 역량 경진대회 대상 수상 실사 사진" class="activity-real-img">
+                            <span class="activity-badge">전국 경진대회</span>
+                            <span class="activity-date">2026. 07</span>
+                        </div>
+                        <div class="activity-content">
+                            <h3 class="activity-title">전국 시니어 디지털 경진대회 최우수 지도자상 수상</h3>
+                            <p class="activity-text">
+                                봄날 강좌를 수강하신 78세 이숙자 어르신께서 디지털 부문 대상을 차지하시며, 헌신적인 지도 공로를 인정받아 최우수 지도자상을 함께 수상하였습니다.
+                            </p>
+                            <div class="activity-tags">
+                                <span class="tag-item">#최우수지도자상</span>
+                                <span class="tag-item">#디지털경진대회</span>
+                                <span class="tag-item">#은빛성취</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 카드 4 (실사 적용) -->
+                    <div class="activity-card" data-category="lecture">
+                        <div class="activity-thumb">
+                            <img src="images/senior_ai_tablet.jpg" alt="시니어 인공지능 및 태블릿 가족 사진 제작 수업 실사 사진" class="activity-real-img">
+                            <span class="activity-badge">AI 특강</span>
+                            <span class="activity-date">2026. 08</span>
+                        </div>
+                        <div class="activity-content">
+                            <h3 class="activity-title">평생학습관 특강: '생성형 AI로 그리는 나의 가족 앨범'</h3>
+                            <p class="activity-text">
+                                최신 태블릿과 AI 도구를 활용해 어르신 부부께서 사랑하는 가족들의 사진을 예술 작품으로 변환하고 자서전을 엮어내는 감동의 프로젝트입니다.
+                            </p>
+                            <div class="activity-tags">
+                                <span class="tag-item">#생성형AI</span>
+                                <span class="tag-item">#가족앨범</span>
+                                <span class="tag-item">#세대소통</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🌸 4. 가슴 따뜻한 수강생 후기 (실사 프로필 적용) -->
+        <section class="testimonial-section" id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">💖 가슴 뭉클한 은빛 이야기</span>
+                    <h2 class="section-title">“선생님 덕분에 제 삶에<br><span class="spring-gradient-text">다시 봄날이 찾아왔습니다”</span></h2>
+                    <p class="section-desc">
+                        새로운 배움으로 세상과 다시 소통하게 된 수강생 어르신들의 진솔한 손편지입니다.
+                    </p>
+                </div>
+
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-text">
+                            "자식들한테 물어보면 바쁘다고 눈치 보여서 속상했는데, 심봄날 선생님은 똑같은 걸 10번 여쭤봐도 늘 웃으면서 제 손을 잡고 알려주셨어요. 이제는 병원 예약도 혼자 척척 하고 손주들에게 카톡으로 예쁜 꽃사진을 보냅니다."
+                        </p>
+                        <div class="testimonial-user">
+                            <div class="user-avatar-real-frame">
+                                <img src="images/student_grandma.jpg" alt="박옥순 어르신 실사 사진" class="user-avatar-real-img">
+                            </div>
+                            <div class="user-info">
+                                <h4>박옥순 어르신 (75세)</h4>
+                                <p>종로복지관 스마트폰 기초반 수료</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-text">
+                            "젊은 애들만 가는 줄 알았던 패스트푸드점에 가서 키오스크로 불고기버거 세트를 혼자 주문해서 먹던 날, 가슴이 벅차서 눈물이 핑 돌았습니다. 선생님 덕분에 세상 밖으로 당당하게 걸어 나왔습니다."
+                        </p>
+                        <div class="testimonial-user">
+                            <div class="user-avatar-real-frame">
+                                <img src="images/student_grandpa.jpg" alt="김정태 어르신 실사 사진" class="user-avatar-real-img">
+                            </div>
+                            <div class="user-info">
+                                <h4>김정태 어르신 (82세)</h4>
+                                <p>키오스크 정복반 3기 수료생</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-text">
+                            "인공지능 챗GPT로 손주들에게 들려줄 옛날이야기를 쓰고, 스마트폰 영상으로 사진첩을 만들어 가족방에 올렸더니 손주들이 '우리 할머니 최고 멋쟁이'라고 난리가 났네요! 정말 고맙습니다."
+                        </p>
+                        <div class="testimonial-user">
+                            <div class="user-avatar-real-frame">
+                                <img src="images/senior_ai_tablet.jpg" alt="이명숙 어르신 부부 실사 사진" class="user-avatar-real-img">
+                            </div>
+                            <div class="user-info">
+                                <h4>이명숙 어르신 (71세)</h4>
+                                <p>시니어 AI & 영상 제작반 수료</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🌸 5. 강의 의뢰 & 봄날 방명록 (Contact & Guestbook Section) -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">💌 따뜻한 만남 & 소통</span>
+                    <h2 class="section-title">함께 걸어갈 배움의 길,<br><span class="spring-gradient-text">언제든 다정하게 문의해 주세요</span></h2>
+                    <p class="section-desc">
+                        복지관, 평생학습관, 지자체, 도서관 등의 맞춤형 출강 의뢰 및 응원의 메시지를 환영합니다.
+                    </p>
+                </div>
+
+                <div class="contact-layout">
+                    <!-- 강의 문의 폼 -->
+                    <div class="contact-card-box">
+                        <h3>🌸 출강 및 교육 상담 신청</h3>
+                        <p>기관명과 희망하시는 교육 과정을 남겨주시면, 따뜻하고 정성을 다해 상세히 상담해 드립니다.</p>
+
+                        <form class="contact-form" id="mainContactForm">
+                            <div class="form-group">
+                                <label for="contactOrg">기관명 / 단체명</label>
+                                <input type="text" id="contactOrg" placeholder="예: 서울 구민평생학습관, OO복지관" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactName">담당자 성함 (또는 학습자 성함)</label>
+                                <input type="text" id="contactName" placeholder="예: 홍길동 팀장" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactPhone">연락처</label>
+                                <input type="tel" id="contactPhone" placeholder="예: 010-1234-5678" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactCourse">희망 교육 과정</label>
+                                <select id="contactCourse">
+                                    <option value="smartphone">스마트폰 & 무인 키오스크 정복반</option>
+                                    <option value="computer">실생활 컴퓨터 & 안전 인터넷반</option>
+                                    <option value="ai">시니어 AI 친구 만들기 (챗GPT)</option>
+                                    <option value="media">스마트폰 인생 사진 & 영상 앨범반</option>
+                                    <option value="custom">맞춤형 기획 특강 (협의 후 결정)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactMessage">문의 내용 및 희망 일정</label>
+                                <textarea id="contactMessage" rows="3" placeholder="교육 대상(연령대), 예상 인원, 희망 요일 등을 자유롭게 적어주세요."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-submit-inquiry">
+                                🌸 따뜻한 강의 상담 신청하기
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- 봄날 방명록 & 응원 한마디 -->
+                    <div class="guestbook-box" id="guestbook">
+                        <div class="guestbook-header">
+                            <h3>📝 봄날 응원 방명록</h3>
+                            <p style="color:var(--text-muted); font-size:0.95rem;">수강생 여러분과 방문해 주신 모든 분들의 따뜻한 마음을 나눕니다.</p>
+                        </div>
+
+                        <form class="guestbook-form" id="guestbookForm">
+                            <div class="guestbook-input-row">
+                                <input type="text" id="gbName" class="guestbook-input" placeholder="성함 (예: 김순자 어르신)" required>
+                                <input type="text" id="gbRole" class="guestbook-input" placeholder="관계 (예: 복지관 수강생)">
+                            </div>
+                            <textarea id="gbMsg" class="guestbook-textarea" placeholder="강사님께 응원의 한마디 또는 수업 소감을 남겨주세요 🌸" required></textarea>
+                            <button type="submit" class="btn-guestbook-add">💖 방명록 남기기</button>
+                        </form>
+
+                        <div class="guestbook-list" id="guestbookList">
+                            <!-- JS를 통해 실시간 로드 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 🌸 모달 팝업: 특정 과정 즉시 문의 -->
+    <div class="spring-modal-overlay" id="inquiryModal">
+        <div class="spring-modal-content">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="닫기">✕</button>
+            <div style="text-align: center; margin-bottom: 20px;">
+                <span style="font-size: 2.4rem;">🌸</span>
+                <h3 id="modalCourseTitle" style="font-size: 1.45rem; color:#1f242e; margin-top: 6px;">맞춤 교육 과정 문의</h3>
+                <p style="font-size: 0.95rem; color:#6b7280;">기관 및 개인 학습 맞춤 출강 일정을 친절히 안내해 드립니다.</p>
+            </div>
+
+            <form class="contact-form" id="modalContactForm">
+                <div class="form-group">
+                    <label>문의 과정 선택</label>
+                    <select id="inquiryCourseSelect">
+                        <option>스마트폰 & 무인 키오스크 완전 정복</option>
+                        <option>실생활 컴퓨터 & 안전한 인터넷 라이프</option>
+                        <option>시니어 AI 친구 만들기</option>
+                        <option>스마트폰 인생 사진전 & 영상 앨범 제작</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>성함 또는 기관명</label>
+                    <input type="text" placeholder="성함/기관명을 입력해주세요" required>
+                </div>
+                <div class="form-group">
+                    <label>연락처</label>
+                    <input type="tel" placeholder="010-0000-0000" required>
+                </div>
+                <button type="submit" class="btn-submit-inquiry" style="margin-top: 15px;">
+                    🌸 빠른 상담 예약하기
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 🌸 하단 푸터 -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>🌸 봄날의 디지털 동행</h2>
+                    <p>
+                        "나이가 들어갈수록 더 깊어지는 지혜로,<br>
+                        어르신들의 디지털 자립과 행복한 삶을 함께 만들어가는<br>
+                        시니어 IT 라이프 전문 강사 심봄날의 공식 홈페이지입니다."
+                    </p>
+                    <div style="margin-top: 16px; color:#ff9a76; font-weight:700;">
+                        📞 강의 문의 : 010-5892-3341 | 📧 이메일 : bomnal.shim@gmail.com
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>주요 교육 분야</h4>
+                    <ul>
+                        <li><a href="#curriculum">스마트폰 & 키오스크 정복</a></li>
+                        <li><a href="#curriculum">실생활 컴퓨터 & 문서작성</a></li>
+                        <li><a href="#curriculum">시니어 생성형 AI 멘토링</a></li>
+                        <li><a href="#curriculum">인생 사진 & 가족 앨범 영상</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>출강 안내</h4>
+                    <ul>
+                        <li>전국 노인종합복지관 및 경로당</li>
+                        <li>시·구립 평생학습관 및 공공도서관</li>
+                        <li>주민자치센터 은빛 디지털 교실</li>
+                        <li>기업 및 공공기관 시니어 은퇴 준비 특강</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 봄날의 디지털 동행 (Shim Bom-nal). All rights reserved. | 따뜻한 봄날처럼 다정한 배움의 동반자</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 🌸 플로팅 퀵 액션 (전화 연결 & 맨 위로) -->
+    <div class="quick-floating-bar">
+        <a href="tel:010-5892-3341" class="btn-float-call" title="전화 상담 연결" aria-label="전화 상담 연결">
+            📞
+        </a>
+        <button class="btn-float-top" id="scrollTopBtn" title="맨 위로 이동" aria-label="맨 위로 이동" style="display: none;">
+            ▲
+        </button>
+    </div>
+
+    <!-- 스크립트 연결 -->
+    <script src="js/petals.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
